@@ -1,0 +1,755 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <!-- Required meta tags -->
+        <meta charset="utf-8" />
+        <meta
+            name="viewport"
+            content="width=device-width, initial-scale=1, shrink-to-fit=no"
+        />
+        <meta
+            name="LuxVilla - Nikmati, Bersantai, dan Bersenang-senang"
+            content="Temukan kemewahan dan kenyamanan yang menyatu sempurna di LuxVilla. Terletak di Bali, villa kami menawarkan fasilitas premium dan layanan istimewa untuk memastikan setiap momen menginap Anda menjadi spesial."
+        />
+
+        <title>LuxVilla - Villa Terbaik di Bali</title>
+
+        <!-- Global CSS Template -->
+        <style>
+            /* FONTS */
+
+            /* Poppins */
+            @import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+            /* DM Serif Display */
+            /* @import url("https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&display=swap"); */
+
+            /* Playfair Display */
+            @import url("https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap");
+
+            :root {
+                /* VARIABLES SETTINGS */
+
+                /* Fonts */
+                --fn-main: "Poppins", "Trebuchet MS", "Lucida Sans Unicode",
+                    "Lucida Grande", "Lucida Sans", Arial, sans-serif;
+                --fn-special: "Playfair Display", "Times New Roman", Times,
+                    serif;
+
+                /* Colors */
+                --clr-white: white;
+                --clr-primary: #161f2d;
+                --clr-secondary: #f7cc79;
+                --clr-secondary-dark: #ecb853;
+
+                scroll-behavior: smooth;
+                scroll-padding-top: 5.5rem;
+                overflow-x: hidden;
+            }
+        </style>
+
+        <!-- Bootstrap v5.3.3 -->
+        <link
+            href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+            rel="stylesheet"
+            integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
+            crossorigin="anonymous"
+        />
+        <script
+            src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
+            integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
+            crossorigin="anonymous"
+        ></script>
+        <script
+            src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js"
+            integrity="sha384-0pUGZvbkm6XF6gxjEnlmuGrJXVbNuzT9qBBavbLwCsOGabYfZo0T0to5eqruptLy"
+            crossorigin="anonymous"
+        ></script>
+
+        <!-- Button Animation -->
+        <link rel="stylesheet" href="btn-animation/style.css" />
+        <script defer src="btn-animation/script.js"></script>
+
+        <!-- Vanilla -->
+        <link rel="stylesheet" href="style.css" />
+        <script defer src="script.js" defer></script>
+    </head>
+
+    <body>
+        <!-- 
+        ? +==================+
+        ? |  NAVBAR SECTION  |
+        ? +==================+
+        -->
+        <nav
+            id="navbar__section"
+            class="navbar navbar-expand-lg d-flex px-4 py-3 px-lg-5 py-lg-3"
+        >
+            <!--* Logo -->
+            <a class="navbar-brand" href="#">
+                <img src="assets/luxvilla_logo.svg" alt="LuxVilla" />
+            </a>
+
+            <!--* Navbar toggle -->
+            <button
+                class="navbar-toggler"
+                type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#navbarCollapse"
+                aria-controls="navbarCollapse"
+                aria-expanded="false"
+                aria-label="Toggle navigation"
+            >
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <!--* Collapse -->
+            <div class="collapse navbar-collapse" id="navbarCollapse">
+                <!-- Nav -->
+                <ul
+                    class="navbar-nav ms-lg-auto align-items-start align-items-lg-center py-2"
+                >
+                    <li>
+                        <a
+                            class="nav-item nav-link active"
+                            href="#hero__section"
+                            aria-current="page"
+                            >Beranda</a
+                        >
+                    </li>
+                    <li>
+                        <a
+                            class="nav-item nav-link"
+                            href="#facility__section"
+                            aria-current="page"
+                        >
+                            Fasilitas
+                        </a>
+                    </li>
+                    <li>
+                        <a
+                            class="nav-item nav-link"
+                            href="#testimonial__section"
+                            aria-current="page"
+                            >Testimoni</a
+                        >
+                    </li>
+                    <li>
+                        <a
+                            id="navbar-cta-btn"
+                            class="nav-item nav-link mt-2 mt-lg-0 ms-lg-2"
+                            data-hover-animation="wave"
+                            href="#booking__section"
+                        >
+                            <span class="btn-text">Pesan</span>
+                            <div class="text-wrapper">
+                                <div class="upper"></div>
+                                <div class="lower"></div>
+                            </div>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+
+        <main>
+            <!-- 
+                ? +================+
+                ? |  HERO SECTION  |
+                ? +================+
+            -->
+            <section id="hero__section" class="hero__section px-4 px-lg-5">
+                <!--* Carousel -->
+                <div
+                    id="heroCarousel"
+                    class="carousel slide carousel-fade"
+                    data-bs-ride="carousel"
+                >
+                    <div class="carousel-inner">
+                        <div
+                            class="carousel-item active"
+                            data-bs-interval="5000"
+                        >
+                            <div
+                                class="carousel-img"
+                                style="
+                                    background-image: url(assets/images/outside-view-1.webp);
+                                "
+                            ></div>
+                        </div>
+                        <div class="carousel-item" data-bs-interval="5000">
+                            <div
+                                class="carousel-img"
+                                style="
+                                    background-image: url(assets/images/outside-view-2.webp);
+                                "
+                            ></div>
+                        </div>
+                    </div>
+                </div>
+
+                <!--* Text Section -->
+                <div class="text-section d-grid align-items-center d-lg-block">
+                    <div class="d-grid justify-content-center">
+                        <!-- Heading -->
+                        <div class="title-section text-center">
+                            <h1 class="fs-1">
+                                Sambut Liburan
+                                <i>Mewah</i>
+                                Anda di -
+                                <img
+                                    src="assets/luxvilla_logo.svg"
+                                    alt="LuxVilla"
+                                />
+                            </h1>
+
+                            <!-- Arrow Down Animation -->
+                            <a
+                                href="#engagement__section"
+                                class="hero-arrow-link"
+                            >
+                                <div class="hero-arrow-container">
+                                    <div class="hero-arrow-down"></div>
+                                    <div class="hero-arrow-down"></div>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- 
+                ? +======================+
+                ? |  ENGAGEMENT SECTION  |
+                ? +======================+
+            -->
+            <section
+                id="engagement__section"
+                class="engagement__section row d-flex align-content-center gap-4 px-4 px-lg-5 py-5"
+            >
+                <!--* Image -->
+                <div class="image-section col d-none d-lg-flex">
+                    <img
+                        draggable="false"
+                        src="assets/images/pool-side-1.webp"
+                        style="width: min(35vw, 30rem)"
+                        alt="pool side photo of the villa"
+                    />
+                </div>
+
+                <!--* Text -->
+                <div
+                    class="text-section col d-grid justify-content-center align-items-center"
+                >
+                    <h2
+                        id="engagement-title"
+                        class="fs-2 mb-4 text-center text-lg-start mx-auto mx-lg-0"
+                    >
+                        Pengalaman yang <i>Tak Terlupakan</i> Menanti Anda
+                    </h2>
+                    <p
+                        id="engagement-description"
+                        class="fs-6 text-center text-lg-start mx-auto"
+                    >
+                        Temukan kemewahan dan kenyamanan yang menyatu sempurna
+                        di <b><span class="line-through"></span>LuxVilla</b>.
+                        Terletak di Bali, villa kami menawarkan fasilitas
+                        premium dan layanan istimewa untuk memastikan setiap
+                        momen menginap Anda menjadi spesial.
+                    </p>
+                </div>
+            </section>
+
+            <!-- 
+                ? +====================+
+                ? |  FACILITY SECTION  |
+                ? +====================+
+            -->
+            <section
+                id="facility__section"
+                class="facility__section px-4 px-lg-5 py-5"
+            >
+                <!--* Section Title -->
+                <div class="title-section text-center">
+                    <p id="facility__subtitle" class="fs-6 mb-2 fw-light">
+                        Fasilitas Kami
+                    </p>
+                    <h2 id="facility__title" class="fs-2 fw-semibold">
+                        Fasilitas dan Layanan <i>Unggulan</i>
+                    </h2>
+                </div>
+
+                <!--* Facility Items  -->
+                <div class="facility-item-container d-grid">
+                    <div class="facility-item d-flex">
+                        <div
+                            class="img"
+                            style="
+                                background-image: url('assets/images/bedroom-side-1.webp');
+                            "
+                        ></div>
+                        <div class="text-section text-start">
+                            <h5 class="fs-4 fw-bold mb-3">
+                                Kamar Mewah & Nyaman
+                            </h5>
+                            <p class="fs-6 fw-light mb-0">
+                                Setiap kamar dirancang dengan detail yang
+                                sempurna, menawarkan kenyamanan dan kemewahan
+                                dengan fasilitas modern.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="facility-item d-flex flex-row-reverse">
+                        <div
+                            class="img"
+                            style="
+                                background-image: url('assets/images/foods.jpg');
+                            "
+                        ></div>
+                        <div class="text-section text-start">
+                            <h5 class="fs-4 fw-bold mb-3">
+                                Pilihan Kuliner yang Lezat
+                            </h5>
+                            <p class="fs-6 fw-light mb-0">
+                                Nikmati berbagai hidangan internasional dan
+                                lokal yang disajikan di restoran kami yang
+                                mewah.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="facility-item d-flex">
+                        <div
+                            class="img"
+                            style="
+                                background-image: url('assets/images/gym.jpg');
+                            "
+                        ></div>
+                        <div class="text-section text-start">
+                            <h5 class="fs-4 fw-bold mb-3">
+                                Relaksasi dan Kebugaran
+                            </h5>
+                            <p class="fs-6 fw-light mb-0">
+                                Bersantai di kolam renang pribadi kami, nikmati
+                                perawatan di spa, atau tetap bugar di pusat
+                                kebugaran lengkap.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="facility-item d-flex flex-row-reverse">
+                        <div
+                            class="img"
+                            style="
+                                background-image: url('assets/images/bedroom-side-1.webp');
+                            "
+                        ></div>
+                        <div class="text-section text-start">
+                            <h5 class="fs-4 fw-bold mb-3">
+                                Akses ke Atraksi Lokal
+                            </h5>
+                            <p class="fs-6 fw-light mb-0">
+                                Villa kami berlokasi strategis, memberikan Anda
+                                akses mudah ke berbagai destinasi wisata utama
+                                di LuxVilla.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- 
+                ? +=======================+
+                ? |  TESTIMONIAL SECTION  |
+                ? +=======================+
+            -->
+            <section
+                id="testimonial__section"
+                class="testimonial__section gap-5 px-4 px-lg-5 py-5"
+            >
+                <!-- * Testimonial Carousel Section -->
+                <div
+                    id="testimonialCarousel"
+                    class="testimonialCarousel carousel slide d-grid d-md-flex"
+                    data-bs-ride="carousel"
+                >
+                    <!-- * Section Title -->
+                    <div class="title-section m-0">
+                        <p
+                            id="testimonial__subtitle"
+                            class="fs-6 mb-2 fw-light"
+                        >
+                            Testimonial
+                        </p>
+                        <h2 id="testimonial__title" class="fs-2 fw-semibold">
+                            Apa kata tamu kami?
+                        </h2>
+                        <div class="carousel-button mt-3">
+                            <button
+                                class="carousel-control-prev"
+                                type="button"
+                                data-bs-target="#testimonialCarousel"
+                                data-bs-slide="prev"
+                            >
+                                <svg
+                                    width="24"
+                                    height="15"
+                                    viewBox="0 0 24 15"
+                                    fill="none"
+                                    xmlns="http://www.w3.org/2000/svg"
+                                    style="transform: rotate(180deg)"
+                                >
+                                    <path
+                                        fill-rule="evenodd"
+                                        clip-rule="evenodd"
+                                        d="M12.2417 0.43661C12.8486 -0.100336 13.8941 -0.148704 14.5769 0.328583L23.4449 6.52778C23.7979 6.77463 24 7.12845 24 7.50001C24 7.87161 23.7979 8.22533 23.4449 8.47229L14.5769 14.6714C13.8941 15.1487 12.8486 15.1004 12.2417 14.5634C11.6348 14.0265 11.6963 13.2043 12.379 12.727L17.9954 8.80079H1.65405C0.740537 8.80079 0 8.21838 0 7.50001C0 6.78159 0.740537 6.1992 1.65405 6.1992H17.9954L12.379 2.27306C11.6963 1.79578 11.6348 0.97357 12.2417 0.43661Z"
+                                        fill="#000"
+                                    />
+                                </svg>
+
+                                <span class="visually-hidden">Previous</span>
+                            </button>
+                            <button
+                                class="carousel-control-next"
+                                type="button"
+                                data-bs-target="#testimonialCarousel"
+                                data-bs-slide="next"
+                            >
+                                <svg
+                                    width="24"
+                                    height="15"
+                                    viewBox="0 0 24 15"
+                                    fill="none"
+                                    xmlns="http://www.w3.org/2000/svg"
+                                >
+                                    <path
+                                        fill-rule="evenodd"
+                                        clip-rule="evenodd"
+                                        d="M12.2417 0.43661C12.8486 -0.100336 13.8941 -0.148704 14.5769 0.328583L23.4449 6.52778C23.7979 6.77463 24 7.12845 24 7.50001C24 7.87161 23.7979 8.22533 23.4449 8.47229L14.5769 14.6714C13.8941 15.1487 12.8486 15.1004 12.2417 14.5634C11.6348 14.0265 11.6963 13.2043 12.379 12.727L17.9954 8.80079H1.65405C0.740537 8.80079 0 8.21838 0 7.50001C0 6.78159 0.740537 6.1992 1.65405 6.1992H17.9954L12.379 2.27306C11.6963 1.79578 11.6348 0.97357 12.2417 0.43661Z"
+                                        fill="#000"
+                                    />
+                                </svg>
+                                <span class="visually-hidden">Next</span>
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- * Testimonials -->
+                    <div class="carousel-inner">
+                        <div class="carousel-item active">
+                            <div
+                                class="testimonial-card d-flex gap-4 bg-white text-black"
+                            >
+                                <div
+                                    class="quote-icon-wrapper d-none d-md-block"
+                                >
+                                    <svg
+                                        width="45"
+                                        height="39"
+                                        viewBox="0 0 49 43"
+                                        fill="none"
+                                        xmlns="http://www.w3.org/2000/svg"
+                                    >
+                                        <path
+                                            d="M31.9768 21.5H39.4536V27.4814C39.4536 30.7806 36.7713 33.4629 33.4722 33.4629H32.7245C32.4298 33.4622 32.1378 33.5197 31.8653 33.6322C31.5928 33.7447 31.3453 33.9099 31.1369 34.1183C30.9284 34.3267 30.7632 34.5743 30.6508 34.8468C30.5383 35.1192 30.4807 35.4112 30.4814 35.706V40.1921C30.4807 40.4868 30.5383 40.7788 30.6508 41.0513C30.7632 41.3238 30.9284 41.5713 31.1369 41.7797C31.3453 41.9882 31.5928 42.1534 31.8653 42.2659C32.1378 42.3783 32.4298 42.4359 32.7245 42.4352H33.4722C41.734 42.4352 48.4258 35.7434 48.4258 27.4815V5.05103C48.4258 2.57432 46.4164 0.564941 43.9397 0.564941H31.9768C29.5001 0.564941 27.4907 2.57432 27.4907 5.05103V17.0139C27.4907 19.4906 29.5001 21.5 31.9768 21.5ZM5.0603 21.5H12.5371V27.4814C12.5371 30.7806 9.85484 33.4629 6.55566 33.4629H5.80803C5.51327 33.4622 5.22127 33.5197 4.9488 33.6322C4.67634 33.7447 4.42878 33.9099 4.22035 34.1183C4.01192 34.3267 3.84672 34.5743 3.73425 34.8468C3.62177 35.1192 3.56423 35.4112 3.56494 35.706V40.1921C3.56423 40.4868 3.62177 40.7788 3.73425 41.0513C3.84672 41.3238 4.01192 41.5713 4.22035 41.7797C4.42878 41.9882 4.67634 42.1534 4.9488 42.2659C5.22127 42.3783 5.51327 42.4359 5.80803 42.4352H6.55566C14.8175 42.4352 21.5093 35.7434 21.5093 27.4815V5.05103C21.5093 2.57432 19.4999 0.564941 17.0232 0.564941H5.0603C2.5836 0.564941 0.574219 2.57432 0.574219 5.05103V17.0139C0.574219 19.4906 2.5836 21.5 5.0603 21.5Z"
+                                            fill="black"
+                                            fill-opacity="0.2"
+                                        />
+                                    </svg>
+                                </div>
+                                <div class="text-wrapper d-grid">
+                                    <p class="testimonial mb-4">
+                                        Menginap di LuxVilla benar-benar luar
+                                        biasa. Staf yang ramah dan fasilitas
+                                        yang sempurna membuat liburan kami tak
+                                        terlupakan.
+                                    </p>
+                                    <h5
+                                        class="testimonial-author fw-semibold fst-italic mb-0"
+                                    >
+                                        Joko, Jakarta
+                                    </h5>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="carousel-item">
+                            <div
+                                class="testimonial-card d-flex gap-4 bg-white text-black"
+                            >
+                                <div
+                                    class="quote-icon-wrapper d-none d-md-block"
+                                >
+                                    <svg
+                                        width="45"
+                                        height="39"
+                                        viewBox="0 0 49 43"
+                                        fill="none"
+                                        xmlns="http://www.w3.org/2000/svg"
+                                    >
+                                        <path
+                                            d="M31.9768 21.5H39.4536V27.4814C39.4536 30.7806 36.7713 33.4629 33.4722 33.4629H32.7245C32.4298 33.4622 32.1378 33.5197 31.8653 33.6322C31.5928 33.7447 31.3453 33.9099 31.1369 34.1183C30.9284 34.3267 30.7632 34.5743 30.6508 34.8468C30.5383 35.1192 30.4807 35.4112 30.4814 35.706V40.1921C30.4807 40.4868 30.5383 40.7788 30.6508 41.0513C30.7632 41.3238 30.9284 41.5713 31.1369 41.7797C31.3453 41.9882 31.5928 42.1534 31.8653 42.2659C32.1378 42.3783 32.4298 42.4359 32.7245 42.4352H33.4722C41.734 42.4352 48.4258 35.7434 48.4258 27.4815V5.05103C48.4258 2.57432 46.4164 0.564941 43.9397 0.564941H31.9768C29.5001 0.564941 27.4907 2.57432 27.4907 5.05103V17.0139C27.4907 19.4906 29.5001 21.5 31.9768 21.5ZM5.0603 21.5H12.5371V27.4814C12.5371 30.7806 9.85484 33.4629 6.55566 33.4629H5.80803C5.51327 33.4622 5.22127 33.5197 4.9488 33.6322C4.67634 33.7447 4.42878 33.9099 4.22035 34.1183C4.01192 34.3267 3.84672 34.5743 3.73425 34.8468C3.62177 35.1192 3.56423 35.4112 3.56494 35.706V40.1921C3.56423 40.4868 3.62177 40.7788 3.73425 41.0513C3.84672 41.3238 4.01192 41.5713 4.22035 41.7797C4.42878 41.9882 4.67634 42.1534 4.9488 42.2659C5.22127 42.3783 5.51327 42.4359 5.80803 42.4352H6.55566C14.8175 42.4352 21.5093 35.7434 21.5093 27.4815V5.05103C21.5093 2.57432 19.4999 0.564941 17.0232 0.564941H5.0603C2.5836 0.564941 0.574219 2.57432 0.574219 5.05103V17.0139C0.574219 19.4906 2.5836 21.5 5.0603 21.5Z"
+                                            fill="black"
+                                            fill-opacity="0.2"
+                                        />
+                                    </svg>
+                                </div>
+                                <div class="text-wrapper d-grid">
+                                    <p class="testimonial mb-4">
+                                        Villa ini memberikan pengalaman yang
+                                        luar biasa dengan pemandangan yang indah
+                                        dan layanan yang sempurna. Kami pasti
+                                        akan kembali!
+                                    </p>
+                                    <h5
+                                        class="testimonial-author fw-semibold fst-italic mb-0"
+                                    >
+                                        Ayu, Bali
+                                    </h5>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="carousel-item">
+                            <div
+                                class="testimonial-card d-flex gap-4 bg-white text-black"
+                            >
+                                <div
+                                    class="quote-icon-wrapper d-none d-md-block"
+                                >
+                                    <svg
+                                        width="45"
+                                        height="39"
+                                        viewBox="0 0 49 43"
+                                        fill="none"
+                                        xmlns="http://www.w3.org/2000/svg"
+                                    >
+                                        <path
+                                            d="M31.9768 21.5H39.4536V27.4814C39.4536 30.7806 36.7713 33.4629 33.4722 33.4629H32.7245C32.4298 33.4622 32.1378 33.5197 31.8653 33.6322C31.5928 33.7447 31.3453 33.9099 31.1369 34.1183C30.9284 34.3267 30.7632 34.5743 30.6508 34.8468C30.5383 35.1192 30.4807 35.4112 30.4814 35.706V40.1921C30.4807 40.4868 30.5383 40.7788 30.6508 41.0513C30.7632 41.3238 30.9284 41.5713 31.1369 41.7797C31.3453 41.9882 31.5928 42.1534 31.8653 42.2659C32.1378 42.3783 32.4298 42.4359 32.7245 42.4352H33.4722C41.734 42.4352 48.4258 35.7434 48.4258 27.4815V5.05103C48.4258 2.57432 46.4164 0.564941 43.9397 0.564941H31.9768C29.5001 0.564941 27.4907 2.57432 27.4907 5.05103V17.0139C27.4907 19.4906 29.5001 21.5 31.9768 21.5ZM5.0603 21.5H12.5371V27.4814C12.5371 30.7806 9.85484 33.4629 6.55566 33.4629H5.80803C5.51327 33.4622 5.22127 33.5197 4.9488 33.6322C4.67634 33.7447 4.42878 33.9099 4.22035 34.1183C4.01192 34.3267 3.84672 34.5743 3.73425 34.8468C3.62177 35.1192 3.56423 35.4112 3.56494 35.706V40.1921C3.56423 40.4868 3.62177 40.7788 3.73425 41.0513C3.84672 41.3238 4.01192 41.5713 4.22035 41.7797C4.42878 41.9882 4.67634 42.1534 4.9488 42.2659C5.22127 42.3783 5.51327 42.4359 5.80803 42.4352H6.55566C14.8175 42.4352 21.5093 35.7434 21.5093 27.4815V5.05103C21.5093 2.57432 19.4999 0.564941 17.0232 0.564941H5.0603C2.5836 0.564941 0.574219 2.57432 0.574219 5.05103V17.0139C0.574219 19.4906 2.5836 21.5 5.0603 21.5Z"
+                                            fill="black"
+                                            fill-opacity="0.2"
+                                        />
+                                    </svg>
+                                </div>
+                                <div class="text-wrapper d-grid">
+                                    <p class="testimonial mb-4">
+                                        Sangat direkomendasikan! Dari kamar yang
+                                        nyaman hingga makanan yang lezat,
+                                        semuanya memuaskan.
+                                    </p>
+                                    <h5
+                                        class="testimonial-author fw-semibold fst-italic mb-0"
+                                    >
+                                        Rina, Surabaya
+                                    </h5>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- 
+                ? +===================+
+                ? |  BOOKING SECTION  |
+                ? +===================+
+            -->
+            <section
+                id="booking__section"
+                class="booking__section row d-flex align-content-center gap-5 px-4 px-lg-5 py-5"
+            >
+                <!--* Map -->
+                <iframe
+                    class="booking-map col ms-md-5"
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3568.077850457993!2d115.18420147457051!3d-8.799749189969138!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8768ff5356d5c6b7%3A0x88e0675a376ecbd9!2sLuxvillas%20Getaway!5e1!3m2!1sid!2sid!4v1724142363108!5m2!1sid!2sid"
+                    width="600"
+                    height="450"
+                    style="border: 0"
+                    allowfullscreen=""
+                    loading="lazy"
+                    referrerpolicy="no-referrer-when-downgrade"
+                ></iframe>
+
+                <!--* Text -->
+                <div class="text-section col d-grid align-items-center">
+                    <h2 id="booking-title" class="fs-2 mb-4 mx-auto mx-lg-0">
+                        Pesan sekarang untuk <i>penawaran terbatas</i>!
+                    </h2>
+                    <p id="booking-description" class="fs-6 mb-4 mx-auto">
+                        Jangan lewatkan kesempatan untuk menikmati penawaran
+                        eksklusif kami. Klik tombol di bawah ini untuk memesan
+                        sekarang dan nikmati liburan mewah di
+                        <b class="fw-bold fst-italic">LuxVilla!</b>
+                    </p>
+                    <button
+                        id="booking-btn"
+                        class="booking-btn mt-2 mt-lg-0"
+                        data-hover-animation="wave"
+                        action=""
+                    >
+                        <span class="btn-text">Pesan Sekarang!</span>
+                        <div class="text-wrapper">
+                            <div class="upper"></div>
+                            <div class="lower"></div>
+                        </div>
+                    </button>
+                </div>
+            </section>
+        </main>
+
+        <!-- 
+            ? +==================+
+            ? |  FOOTER SECTION  |
+            ? +==================+
+        -->
+        <footer class="py-4">
+            <div class="py-6 py-md-8 py-xl-10">
+                <div class="container">
+                    <div class="row gy-3">
+                        <div class="col-12">
+                            <div class="footer-logo-wrapper text-center">
+                                <a href="#">
+                                    <img
+                                        src="assets/luxvilla_logo.svg"
+                                        alt="BootstrapBrain Logo"
+                                        width="153"
+                                        height="50"
+                                    />
+                                </a>
+                            </div>
+                        </div>
+                        <div class="col-12">
+                            <div class="link-wrapper mb-4 mb-md-0">
+                                <ul
+                                    class="m-0 list-unstyled d-flex justify-content-center gap-3"
+                                >
+                                    <li>
+                                        <a
+                                            href="#"
+                                            class="text-decoration-none opacity-75"
+                                        >
+                                            Beranda
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a
+                                            href="#facility__section"
+                                            class="text-decoration-none opacity-75"
+                                        >
+                                            Fasilitas
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a
+                                            href="#testimonial__section"
+                                            class="text-decoration-none opacity-75"
+                                        >
+                                            Testimoni
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a
+                                            href="#booking__section"
+                                            class="text-decoration-none opacity-75"
+                                        >
+                                            Booking
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Copyright - Bootstrap Brain Component -->
+            <div>
+                <div class="container">
+                    <div class="row gy-3 gy-sm-0 align-items-sm-center">
+                        <div class="col-sm-6">
+                            <div
+                                class="copyright-wrapper d-block mb-1 fs-9 text-center text-sm-start"
+                            >
+                                &copy; 2024. All Rights Reserved.
+                            </div>
+                            <div
+                                class="credit-wrapper d-block fs-10 text-center text-sm-start"
+                            >
+                                Built by
+                                <a
+                                    target="_blank"
+                                    href="https://instagram.com/ryanproductions_"
+                                    class="text-decoration-none fst-italic"
+                                >
+                                    ryan_productions</a
+                                >
+                                with <span class="text-danger">&#9829;</span>
+                            </div>
+                        </div>
+                        <div class="col-sm-6">
+                            <div class="social-media-wrapper">
+                                <ul
+                                    class="m-0 list-unstyled d-flex justify-content-center justify-content-sm-end gap-3"
+                                >
+                                    <li>
+                                        <a
+                                            href="#"
+                                            class="link-opacity-75-hover"
+                                        >
+                                            <svg
+                                                xmlns="http://www.w3.org/2000/svg"
+                                                width="30"
+                                                height="30"
+                                                fill="currentColor"
+                                                class="bi bi-youtube"
+                                                viewBox="0 0 16 16"
+                                            >
+                                                <path
+                                                    d="M8.051 1.999h.089c.822.003 4.987.033 6.11.335a2.01 2.01 0 0 1 1.415 1.42c.101.38.172.883.22 1.402l.01.104.022.26.008.104c.065.914.073 1.77.074 1.957v.075c-.001.194-.01 1.108-.082 2.06l-.008.105-.009.104c-.05.572-.124 1.14-.235 1.558a2.01 2.01 0 0 1-1.415 1.42c-1.16.312-5.569.334-6.18.335h-.142c-.309 0-1.587-.006-2.927-.052l-.17-.006-.087-.004-.171-.007-.171-.007c-1.11-.049-2.167-.128-2.654-.26a2.01 2.01 0 0 1-1.415-1.419c-.111-.417-.185-.986-.235-1.558L.09 9.82l-.008-.104A31 31 0 0 1 0 7.68v-.123c.002-.215.01-.958.064-1.778l.007-.103.003-.052.008-.104.022-.26.01-.104c.048-.519.119-1.023.22-1.402a2.01 2.01 0 0 1 1.415-1.42c.487-.13 1.544-.21 2.654-.26l.17-.007.172-.006.086-.003.171-.007A100 100 0 0 1 7.858 2zM6.4 5.209v4.818l4.157-2.408z"
+                                                />
+                                            </svg>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a
+                                            href="#"
+                                            class="link-opacity-75-hover"
+                                        >
+                                            <svg
+                                                xmlns="http://www.w3.org/2000/svg"
+                                                width="25"
+                                                height="25"
+                                                fill="currentColor"
+                                                class="bi bi-facebook"
+                                                viewBox="0 0 16 16"
+                                            >
+                                                <path
+                                                    d="M16 8.049c0-4.446-3.582-8.05-8-8.05C3.58 0-.002 3.603-.002 8.05c0 4.017 2.926 7.347 6.75 7.951v-5.625h-2.03V8.05H6.75V6.275c0-2.017 1.195-3.131 3.022-3.131.876 0 1.791.157 1.791.157v1.98h-1.009c-.993 0-1.303.621-1.303 1.258v1.51h2.218l-.354 2.326H9.25V16c3.824-.604 6.75-3.934 6.75-7.951"
+                                                />
+                                            </svg>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a
+                                            href="#"
+                                            class="link-opacity-75-hover"
+                                        >
+                                            <svg
+                                                xmlns="http://www.w3.org/2000/svg"
+                                                width="29"
+                                                height="29"
+                                                fill="currentColor"
+                                                class="bi bi-twitter"
+                                                viewBox="0 0 16 16"
+                                            >
+                                                <path
+                                                    d="M5.026 15c6.038 0 9.341-5.003 9.341-9.334q.002-.211-.006-.422A6.7 6.7 0 0 0 16 3.542a6.7 6.7 0 0 1-1.889.518 3.3 3.3 0 0 0 1.447-1.817 6.5 6.5 0 0 1-2.087.793A3.286 3.286 0 0 0 7.875 6.03a9.32 9.32 0 0 1-6.767-3.429 3.29 3.29 0 0 0 1.018 4.382A3.3 3.3 0 0 1 .64 6.575v.045a3.29 3.29 0 0 0 2.632 3.218 3.2 3.2 0 0 1-.865.115 3 3 0 0 1-.614-.057 3.28 3.28 0 0 0 3.067 2.277A6.6 6.6 0 0 1 .78 13.58a6 6 0 0 1-.78-.045A9.34 9.34 0 0 0 5.026 15"
+                                                />
+                                            </svg>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </footer>
+    </body>
+</html>

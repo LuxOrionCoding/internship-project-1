@@ -1,0 +1,79 @@
+[data-hover-animation] {
+    --first-fn: var(--fn-main);
+    --second-fn: var(--fn-special);
+
+    --main-clr: var(--clr-secondary);
+    --text-hover-clr: black;
+}
+
+[data-hover-animation="wave"] {
+    position: relative;
+    display: flex;
+
+    padding-block: 4px !important;
+    padding-inline: 1.5rem !important;
+    background-color: transparent;
+    border: 2px solid var(--main-clr);
+    /* border-radius: 100vmax; */
+    cursor: pointer;
+    transition: background-color 650ms, scale 200ms;
+}
+
+[data-hover-animation="wave"]:hover,
+#navbar-cta-btn.active {
+    background-color: var(--main-clr);
+}
+
+[data-hover-animation="wave"]:active {
+    scale: .95;
+}
+
+[data-hover-animation="wave"] .btn-text {
+    position: absolute;
+    visibility: hidden;
+    height: auto;
+    width: auto;
+    white-space: nowrap;
+}
+
+[data-hover-animation="wave"] .text-wrapper {
+    display: block;
+    overflow: hidden;
+    width: fit-content;
+    min-height: 25px;
+    font-weight: bolder;
+}
+
+[data-hover-animation="wave"] .text-wrapper>div {
+    display: flex;
+}
+
+[data-hover-animation="wave"] .text-wrapper div p {
+    margin: 0;
+    text-align: center;
+    letter-spacing: 1px;
+}
+
+[data-hover-animation="wave"] .text-wrapper div:first-of-type p {
+    font-family: var(--first-fn);
+    font-weight: 600;
+    color: var(--main-clr);
+}
+
+[data-hover-animation="wave"] .text-wrapper div:last-of-type p {
+    font-family: var(--second-fn);
+    font-size: 1.1rem;
+    line-height: 1.4;
+    font-weight: bolder;
+    font-style: italic;
+    color: var(--text-hover-clr);
+}
+
+#navbar-cta-btn.active .text-wrapper div:last-of-type p {
+    color: var(--text-hover-clr);
+}
+
+#navbar-cta-btn.active .text-wrapper p,
+[data-hover-animation="wave"]:hover .text-wrapper p {
+    transform: translateY(-100%);
+}

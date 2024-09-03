@@ -1,0 +1,647 @@
+body {
+	font-family: var(--fn-main);
+	background-color: var(--clr-primary);
+	color: white;
+
+	overflow-x: hidden;
+}
+
+/* *,
+*::before,
+*::after {
+	outline: 2px solid red;
+} */
+
+img {
+	user-select: none;
+	-moz-user-select: none;
+	-webkit-user-drag: none;
+	-webkit-user-select: none;
+	-ms-user-select: none;
+}
+
+main,
+footer {
+	max-width: 100rem;
+	margin-inline: auto !important;
+}
+
+[id$="__section"] {
+	min-height: calc(100vh - 5rem);
+	width: 100%;
+
+	display: grid;
+	align-content: center;
+}
+
+/*
+*	NAVBAR SECTION 
+*/
+
+#navbar__section {
+	min-height: auto;
+
+	position: fixed !important;
+	inset-inline: 0;
+	background: none;
+
+	z-index: 999;
+	transition: background 250ms;
+}
+
+#navbar__section.scrolled {
+	background: var(--clr-primary) !important;
+	box-shadow: 0 5px 18px #0000005e;
+}
+
+.navbar-toggler {
+	background: none;
+	border: none;
+	outline: none;
+	width: 3rem;
+	height: 3rem;
+}
+
+.navbar-toggler:focus {
+	outline: none !important;
+	border: none !important;
+	box-shadow: none !important;
+}
+
+.navbar-toggler-icon {
+	content: url('assets/icons/icons8-hamburger-menu.svg');
+	width: 35px;
+	height: auto;
+}
+
+.navbar-toggler.active .navbar-toggler-icon {
+	content: url('assets/icons/icons8-close.svg');
+	width: 35px;
+	height: auto;
+}
+
+.navbar-brand img {
+	width: 6rem;
+	height: auto;
+}
+
+.navbar-nav li a {
+	color: white !important;
+	font-weight: 200;
+	text-decoration: none !important;
+	transition: 250ms;
+}
+
+.navbar-nav li a:has(b) {
+	transition: none !important;
+}
+
+.navbar-nav li a.active {
+	font-weight: bolder;
+}
+
+
+/*
+*	 HERO SECTION 
+*/
+
+#hero__section {
+	position: relative;
+
+	height: 100vh;
+	padding-inline: 2rem;
+
+	align-content: center;
+}
+
+#hero__section::after {
+	content: '';
+	position: absolute;
+	top: 0;
+	left: 50%;
+	transform: translateX(-50%);
+	width: 100vw;
+	height: 100vh;
+	background-color: black;
+	opacity: .5;
+	z-index: -1;
+}
+
+#heroCarousel {
+	content: '';
+	position: absolute;
+	top: 0;
+	left: 50%;
+	transform: translateX(-50%);
+	width: 100vw;
+	height: 100vh;
+	z-index: -2;
+
+	overflow-y: hidden;
+}
+
+#heroCarousel .carousel-inner .carousel-img {
+	background-size: cover;
+	background-position: center;
+	background-repeat: no-repeat;
+
+	height: 100vh;
+	width: 100vw;
+}
+
+#hero__section .text-section {
+	justify-items: center;
+	align-self: center;
+}
+
+#hero__section .title-section {
+	position: relative;
+	font-family: var(--fn-main);
+	font-weight: bolder !important;
+	width: fit-content;
+	max-width: 35rem;
+}
+
+#hero__section .title-section i {
+	font-family: var(--fn-special);
+}
+
+.hero-arrow-link {
+	position: absolute;
+	left: 50%;
+	transform: translateX(-50%);
+
+	bottom: -30vh;
+
+	width: 50px;
+	height: 48px;
+	cursor: pointer;
+
+	opacity: .7;
+}
+
+.hero-arrow-container {
+	margin: auto;
+	width: 25px;
+	height: 20px;
+	animation: bounce 1600ms infinite cubic-bezier(0.445, 0.05, 0.55, 0.95);
+}
+
+.hero-arrow-down {
+	margin-bottom: 13px;
+	height: 6px;
+	background: var(--clr-secondary-dark);
+	transform: rotate(45deg);
+	transform-origin: 0% 0%;
+	/* border-radius: 5px; */
+}
+
+.hero-arrow-down:after {
+	content: '';
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	bottom: 0;
+	left: 100%;
+	/* border-radius: 5px; */
+	background: var(--clr-secondary-dark);
+	transform: rotate(-90deg);
+	transform-origin: 0% 100%;
+}
+
+@keyframes bounce {
+	50% {
+		transform: translateY(-20px);
+	}
+}
+
+
+/*
+*	ENGAGEMENT SECTION 
+*/
+
+#engagement__section {
+	display: block;
+	min-height: auto;
+	height: fit-content;
+	margin-inline: auto;
+}
+
+#engagement__section .image-section {
+	justify-content: center;
+	align-items: center;
+}
+
+#engagement-title {
+	color: var(--clr-secondary);
+	font-family: var(--fn-main);
+	max-width: 30rem;
+	align-self: self-end;
+}
+
+#engagement-title i {
+	font-family: var(--fn-special);
+}
+
+#engagement-description {
+	font-family: var(--fn-main);
+	font-weight: 200;
+	line-height: 1.8;
+	max-width: 40rem;
+	margin-bottom: 0;
+
+	align-self: self-start;
+	text-align: justify;
+}
+
+#engagement-description b {
+	font-weight: 600;
+	white-space: nowrap;
+}
+
+#engagement-description .line-through {
+	position: relative;
+	top: -4px;
+	display: inline-block;
+	width: 1.8rem;
+	height: 2.5px;
+	background-color: white;
+	margin-inline: 2px 7px;
+}
+
+
+/*
+*	FACILITY SECTION 
+*/
+
+#facility__section {
+	position: relative;
+}
+
+#facility__section::before {
+	content: '';
+	position: absolute;
+	inset: 0 -40vw;
+	background-image: url('assets/images/inside-7.webp');
+	background-position: center center;
+	background-size: cover;
+	background-repeat: no-repeat;
+	z-index: -2;
+
+	overflow: hidden;
+}
+
+#facility__section::after {
+	content: '';
+	position: absolute;
+	inset: 0 -40vw;
+
+	background-color: #000000b0;
+	z-index: -1;
+
+	backdrop-filter: blur(2px);
+}
+
+#facility__section .title-section {
+	margin-bottom: 5.5rem;
+}
+
+#facility__section .title-section * {
+	margin-inline: auto;
+}
+
+#facility__title {
+	font-family: var(--fn-main);
+	color: var(--clr-secondary);
+	width: fit-content;
+	max-width: 25rem;
+}
+
+#facility__title i {
+	font-family: var(--fn-special);
+}
+
+#facility__subtitle {
+	color: var(--clr-secondary-dark);
+	width: fit-content;
+}
+
+#facility__section .facility-item-container {
+	justify-items: center;
+	grid-template-columns: 1fr;
+	row-gap: 3rem;
+}
+
+#facility__section .facility-item {
+	width: min(70rem, 100%);
+	gap: 3rem;
+
+	justify-content: center;
+	place-items: center;
+
+	flex-wrap: wrap;
+}
+
+#facility__section .facility-item .img {
+	width: min(100%, 27.5rem);
+	height: 15rem;
+
+	background-position: center center;
+	background-size: cover;
+	background-repeat: no-repeat;
+}
+
+#facility__section .facility-item .text-section h5 {
+	font-family: var(--fn-special);
+	color: var(--clr-secondary);
+}
+
+#facility__section .facility-item .text-section p {
+	line-height: 1.8;
+	opacity: .8;
+	max-width: 30rem;
+}
+
+
+/* 
+*	TESTIMONIAL SECTION
+*/
+
+#testimonial__section {
+	min-height: auto;
+	height: fit-content;
+
+	display: flex;
+	justify-content: center;
+}
+
+#testimonialCarousel {
+	display: flex;
+	column-gap: 4rem;
+	align-items: center;
+}
+
+#testimonial__section .title-section {
+	display: grid;
+	justify-content: center;
+	position: relative;
+	margin-bottom: 5.5rem;
+
+	justify-items: center;
+	text-align: center;
+}
+
+#testimonial__title {
+	font-family: var(--fn-main);
+	color: var(--clr-secondary);
+	width: fit-content;
+	max-width: 23rem;
+}
+
+#testimonial__subtitle {
+	color: var(--clr-secondary-dark);
+	width: fit-content;
+}
+
+#testimonialCarousel .carousel-button {
+	display: flex;
+	gap: .5rem;
+}
+
+#testimonialCarousel button {
+	width: fit-content;
+	height: fit-content;
+
+	position: static;
+
+	opacity: 1 !important;
+}
+
+#testimonialCarousel button:active {
+	scale: .95;
+}
+
+#testimonialCarousel button svg {
+	width: 3rem;
+	height: 3rem;
+	padding: 10px;
+	background: var(--clr-secondary-dark);
+	border-radius: 50%;
+}
+
+#testimonialCarousel .carousel-inner {
+	position: relative;
+	width: 100%;
+	max-width: 35rem;
+	min-height: 23rem;
+
+	overflow-y: visible;
+}
+
+#testimonialCarousel .carousel-inner::before {
+	content: '';
+	position: absolute;
+	inset-block: 0;
+	left: 0;
+	width: 1.2rem;
+
+	background: linear-gradient(to right, rgba(22, 31, 45, 0.5) 2%, transparent 100%);
+	z-index: 2;
+}
+
+#testimonialCarousel .carousel-inner::after {
+	content: '';
+	position: absolute;
+	inset-block: 0;
+	right: 0;
+	width: 1.2rem;
+
+	background: linear-gradient(to left, rgba(22, 31, 45, 0.5) 2%, transparent 100%);
+	z-index: 2;
+}
+
+#testimonialCarousel .carousel-item {
+	width: 100%;
+	height: 100%;
+	padding: 1.8rem;
+}
+
+#testimonialCarousel .carousel-item.active {
+	display: inline-block !important;
+}
+
+#testimonialCarousel .testimonial-card-wrapper {
+	min-height: 15rem;
+}
+
+#testimonialCarousel .testimonial-card {
+	width: 100%;
+	min-height: 100%;
+	padding: 2rem 1.5rem;
+	border-radius: 10px;
+}
+
+#testimonialCarousel .testimonial-card .text-wrapper {
+	grid-template-rows: auto .2fr;
+	row-gap: 1.5rem;
+}
+
+#testimonialCarousel .testimonial {
+	font-size: 1.1rem;
+	font-weight: 300;
+}
+
+
+/* 
+*	BOOKING SECTION
+*/
+
+#booking__section {
+	position: relative;
+	justify-content: center;
+	margin-inline: auto;
+}
+
+#booking__section::before {
+	content: '';
+	position: absolute;
+	inset: 0 -40vw;
+
+	background-image: url(assets/images/inside-6.webp);
+	background-position: center;
+	background-size: cover;
+	background-repeat: no-repeat;
+
+	z-index: -3;
+}
+
+#booking__section::after {
+	content: '';
+	position: absolute;
+	inset: 0 -40vw;
+
+	background: #141d2b;
+	opacity: .9;
+	z-index: -2;
+	backdrop-filter: blur(5px);
+}
+
+#booking__section .booking-map {
+	width: max(20rem, 100%);
+	min-height: 25rem;
+	height: 100%;
+}
+
+#booking__section .booking-map:focus {
+	outline: none;
+	border: none;
+}
+
+#booking__section .text-section {
+	min-width: 20rem;
+	justify-content: center;
+	justify-items: center;
+	align-self: center;
+	height: fit-content;
+}
+
+#booking-title {
+	color: var(--clr-secondary);
+	font-family: var(--fn-main);
+	max-width: 30rem;
+	align-self: self-end;
+	text-align: center;
+}
+
+#booking-title i {
+	font-family: var(--fn-special);
+}
+
+#booking-description {
+	font-family: var(--fn-main);
+	font-weight: 200;
+	line-height: 1.8;
+	max-width: 35rem;
+	margin-bottom: 0;
+	align-self: self-start;
+	text-align: center;
+}
+
+#booking-btn {
+	padding: 8px 1.5rem !important;
+}
+
+
+/* 
+*	FOOTER SECTION
+*/
+
+footer {
+	color: var(--clr-secondary);
+}
+
+footer .link-wrapper a {
+	color: var(--clr-secondary) !important;
+	font-weight: 300;
+}
+
+footer .credit-wrapper {
+	font-weight: 200;
+}
+
+footer .credit-wrapper a {
+	color: var(--clr-secondary-dark) !important;
+}
+
+footer .social-media-wrapper a {
+	color: var(--clr-secondary) !important;
+}
+
+
+/* 
+*	RESPONSIVE SECTION
+*/
+
+@media screen and (min-width: 950px) {
+
+	/** FACILITY SECTION */
+	.navbar-brand img {
+		width: 9rem;
+		height: auto;
+	}
+
+
+	/** FACILITY SECTION */
+	.facility__section::before {
+		background-attachment: fixed;
+	}
+
+
+	/** TESTIMONIAL SECTION */
+
+	#testimonial__section .title-section {
+		justify-items: start;
+		text-align: start;
+	}
+
+	#testimonialCarousel .carousel-inner {
+		min-height: 19rem;
+	}
+
+
+	/** BOOKING SECTION */
+
+	#booking__section .text-section {
+		justify-content: start;
+		justify-items: start;
+	}
+
+	#booking-title {
+		text-align: start;
+	}
+
+	#booking-description {
+		text-align: start;
+	}
+
+}
